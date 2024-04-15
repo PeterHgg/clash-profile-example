@@ -1,0 +1,43 @@
+mixed-port: 7890
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: :9090
+proxy-providers:
+  jichang:
+    type: http
+    url: {把你的所有机场订阅放到网上任意[订阅转换]网站，勾选“输出为Node List”，然后生成的新连接替换此处}
+    interval: 3600
+    path: ./jichang.yaml
+    health-check:
+      enable: true
+      url: https://www.gstatic.com/generate_204
+      interval: 150
+      lazy: false
+proxy-groups:
+- name: 自动测速
+  type: url-test
+  use:
+    - jichang
+  tolerance: 150
+  lazy: false
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+rule-providers:
+  proxy:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt"
+    path: ./ruleset/proxy.yaml
+    interval: 86400
+  direct:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt"
+    path: ./ruleset/direct.yaml
+    interval: 86400
+rules:
+- RULE-SET,proxy,自动测速
+- RULE-SET,direct,DIRECT
+- GEOIP,CN,DIRECT
+- MATCH,自动测速
