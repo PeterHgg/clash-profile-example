@@ -1,0 +1,49 @@
+mixed-port: 7890
+allow-lan: true
+mode: rule
+log-level: info
+external-controller: :9090
+proxies:
+  - {name: 自建节点, server: 123.123.123.123, port: 80, type: vmess, uuid: bb221f5c-d1c2-4db6-cc62-c92f982b4bf3, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /qwer}}
+proxy-providers:
+  jichang:
+    type: http
+    url: {把你的所有机场订阅放到网上任意[订阅转换]网站，勾选“输出为Node List”，然后生成的新连接替换此处，删掉大括号}
+    interval: 3600
+    path: ./jichang.yaml
+    health-check:
+      enable: true
+      url: https://www.gstatic.com/generate_204
+      interval: 60
+      lazy: false
+proxy-groups:
+- name: 机场中转
+  type: relay
+  proxies:
+    - 机场测速
+    - 自建节点
+- name: 机场测速
+  type: url-test
+  use:
+    - jichang
+  lazy: false
+  url: https://www.gstatic.com/generate_204
+  interval: 60
+rule-providers:
+  proxy:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt"
+    path: ./ruleset/proxy.yaml
+    interval: 86400
+  direct:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt"
+    path: ./ruleset/direct.yaml
+    interval: 86400
+rules:
+- RULE-SET,proxy,机场中转
+- RULE-SET,direct,DIRECT
+- GEOIP,CN,DIRECT
+- MATCH,机场中转
