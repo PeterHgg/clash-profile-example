@@ -24,11 +24,14 @@ proxy-groups:
     - 自建节点
 - name: 机场测速
   type: url-test
+#  type: load-balance
+#  strategy: round-robin
   use:
     - jichang
   lazy: false
   url: https://www.gstatic.com/generate_204
   interval: 60
+  timeout: 2000
 rule-providers:
   proxy:
     type: http
