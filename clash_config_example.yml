@@ -16,6 +16,7 @@ proxy-providers:
       url: https://www.gstatic.com/generate_204
       interval: 60
       lazy: false
+      timeout: 2000
 proxy-groups:
 - name: 机场中转
   type: relay
