@@ -8,11 +8,16 @@ const urlGroups = {
     'https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/proxy.txt'
   ],
   '/direct': [
-    'https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/lancidr.txt',
     'https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt',
     'https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/private.txt',
+    'https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/tld-not-cn.txt'
+  ],
+  '/directip': [
+    'https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/lancidr.txt',
     'https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/cncidr.txt'
-    // 在这里添加更多直连链接
+  ],
+  '/proxyip': [
+    'https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/telegramcidr.txt'
   ],
 };
 
