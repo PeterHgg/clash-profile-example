@@ -74,26 +74,23 @@ rule-providers:
     url: "http://rules.5468936.xyz/direct"
     path: ./ruleset/direct.yaml
     interval: 86400
+  proxyip:
+    type: http
+    behavior: ipcidr
+    url: "http://rules.5468936.xyz/proxyip"
+    path: ./ruleset/proxy.yaml
+    interval: 86400
+  directip:
+    type: http
+    behavior: ipcidr
+    url: "http://rules.5468936.xyz/directip"
+    path: ./ruleset/direct.yaml
+    interval: 86400
 rules:
 - DOMAIN-SUFFIX,5468936.xyz,DIRECT
-- DOMAIN-SUFFIX,ip6-localhost,DIRECT
-- DOMAIN-SUFFIX,ip6-loopback,DIRECT
-- DOMAIN-SUFFIX,lan,DIRECT
-- DOMAIN-SUFFIX,local,DIRECT
-- DOMAIN-SUFFIX,localhost,DIRECT
-- IP-CIDR,0.0.0.0/8,DIRECT,no-resolve
-- IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
-- IP-CIDR,100.64.0.0/10,DIRECT,no-resolve
-- IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
-- IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
-- IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
-- IP-CIDR,198.18.0.0/16,DIRECT,no-resolve
-- IP-CIDR,224.0.0.0/4,DIRECT,no-resolve
-- IP-CIDR6,::1/128,DIRECT,no-resolve
-- IP-CIDR6,fc00::/7,DIRECT,no-resolve
-- IP-CIDR6,fe80::/10,DIRECT,no-resolve
-- IP-CIDR6,fd00::/8,DIRECT,no-resolve
+- RULE-SET,proxyip,自动测速
 - RULE-SET,proxy,自动测速
+- RULE-SET,directip,DIRECT
 - RULE-SET,direct,DIRECT
 - GEOIP,CN,DIRECT
 - MATCH,自动测速
