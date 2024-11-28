@@ -8,54 +8,26 @@ mode: rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 优选-cloudflare.182682.xyz, server: "cloudflare.182682.xyz", port: 80, type: vmess, uuid: be9cf152-7cf1-46f9-88ed-a55b343c927b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /linxudo, headers: {Host: "luodi.5468936.xyz"}}}
-  - {name: 优选-ip.sb, server: "ip.sb", port: 80, type: vmess, uuid: be9cf152-7cf1-46f9-88ed-a55b343c927b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /linxudo, headers: {Host: "luodi.5468936.xyz"}}}
-  - {name: 优选-japan.com, server: "japan.com", port: 80, type: vmess, uuid: be9cf152-7cf1-46f9-88ed-a55b343c927b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /linxudo, headers: {Host: "luodi.5468936.xyz"}}}
-  - {name: 优选-malaysia.com, server: "malaysia.com", port: 80, type: vmess, uuid: be9cf152-7cf1-46f9-88ed-a55b343c927b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /linxudo, headers: {Host: "luodi.5468936.xyz"}}}
-  - {name: 优选-russia.com, server: "russia.com", port: 80, type: vmess, uuid: be9cf152-7cf1-46f9-88ed-a55b343c927b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /linxudo, headers: {Host: "luodi.5468936.xyz"}}}
-  - {name: 优选-singapore.com, server: "singapore.com", port: 80, type: vmess, uuid: be9cf152-7cf1-46f9-88ed-a55b343c927b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /linxudo, headers: {Host: "luodi.5468936.xyz"}}}
-  - {name: 优选-www.visa.com, server: "www.visa.com", port: 80, type: vmess, uuid: be9cf152-7cf1-46f9-88ed-a55b343c927b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /linxudo, headers: {Host: "luodi.5468936.xyz"}}}
-  - {name: 优选-visa.cn, server: "visa.cn", port: 80, type: vmess, uuid: be9cf152-7cf1-46f9-88ed-a55b343c927b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /linxudo, headers: {Host: "luodi.5468936.xyz"}}}
-  - {name: 优选-www.visa.com.sg, server: "www.visa.com.sg", port: 80, type: vmess, uuid: be9cf152-7cf1-46f9-88ed-a55b343c927b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /linxudo, headers: {Host: "luodi.5468936.xyz"}}}
-  - {name: 优选-www.visa.com.hk, server: "www.visa.com.hk", port: 80, type: vmess, uuid: be9cf152-7cf1-46f9-88ed-a55b343c927b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /linxudo, headers: {Host: "luodi.5468936.xyz"}}}
-  - {name: 优选-www.visa.com.tw, server: "www.visa.com.tw", port: 80, type: vmess, uuid: be9cf152-7cf1-46f9-88ed-a55b343c927b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /linxudo, headers: {Host: "luodi.5468936.xyz"}}}
-  - {name: 优选-www.visa.co.jp, server: "www.visa.co.jp", port: 80, type: vmess, uuid: be9cf152-7cf1-46f9-88ed-a55b343c927b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /linxudo, headers: {Host: "luodi.5468936.xyz"}}}
-  - {name: 优选-www.visakorea.com, server: "www.visakorea.com", port: 80, type: vmess, uuid: be9cf152-7cf1-46f9-88ed-a55b343c927b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /linxudo, headers: {Host: "luodi.5468936.xyz"}}}
-  - {name: 优选-www.gco.gov.qa, server: "www.gco.gov.qa", port: 80, type: vmess, uuid: be9cf152-7cf1-46f9-88ed-a55b343c927b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /linxudo, headers: {Host: "luodi.5468936.xyz"}}}
-  - {name: 优选-www.gov.se, server: "www.gov.se", port: 80, type: vmess, uuid: be9cf152-7cf1-46f9-88ed-a55b343c927b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /linxudo, headers: {Host: "luodi.5468936.xyz"}}}
-  - {name: 优选-www.gov.ua, server: "www.gov.ua", port: 80, type: vmess, uuid: be9cf152-7cf1-46f9-88ed-a55b343c927b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /linxudo, headers: {Host: "luodi.5468936.xyz"}}}
-  - {name: 优选-www.digitalocean.com, server: "www.digitalocean.com", port: 80, type: vmess, uuid: be9cf152-7cf1-46f9-88ed-a55b343c927b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /linxudo, headers: {Host: "luodi.5468936.xyz"}}}
-  - {name: 优选-www.whoer.net, server: "www.whoer.net", port: 80, type: vmess, uuid: be9cf152-7cf1-46f9-88ed-a55b343c927b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /linxudo, headers: {Host: "luodi.5468936.xyz"}}}
-  - {name: 优选-www.whatismyip.com, server: "www.whatismyip.com", port: 80, type: vmess, uuid: be9cf152-7cf1-46f9-88ed-a55b343c927b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /linxudo, headers: {Host: "luodi.5468936.xyz"}}}
-  - {name: 优选-gur.gov.ua, server: "gur.gov.ua", port: 80, type: vmess, uuid: be9cf152-7cf1-46f9-88ed-a55b343c927b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /linxudo, headers: {Host: "luodi.5468936.xyz"}}}
-  - {name: 优选-fbi.gov, server: "fbi.gov", port: 80, type: vmess, uuid: be9cf152-7cf1-46f9-88ed-a55b343c927b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /linxudo, headers: {Host: "luodi.5468936.xyz"}}}
-  - {name: 优选-ns.cloudflare.com, server: "ns.cloudflare.com", port: 80, type: vmess, uuid: be9cf152-7cf1-46f9-88ed-a55b343c927b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /linxudo, headers: {Host: "luodi.5468936.xyz"}}}
+  - {name: CDN优选-1, server: "1.cdn.5468936.xyz", port: 443, type: vmess, uuid: be9cf152-7cf1-46f9-88ed-a55b343c927b, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /linuxdo}}
+  - {name: CDN优选-2, server: "2.cdn.5468936.xyz", port: 443, type: vmess, uuid: be9cf152-7cf1-46f9-88ed-a55b343c927b, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /linuxdo}}
+  - {name: CDN优选-3, server: "3.cdn.5468936.xyz", port: 443, type: vmess, uuid: be9cf152-7cf1-46f9-88ed-a55b343c927b, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /linuxdo}}
+  - {name: CDN优选-4, server: "4.cdn.5468936.xyz", port: 443, type: vmess, uuid: be9cf152-7cf1-46f9-88ed-a55b343c927b, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /linuxdo}}
+  - {name: CDN优选-5, server: "5.cdn.5468936.xyz", port: 443, type: vmess, uuid: be9cf152-7cf1-46f9-88ed-a55b343c927b, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /linuxdo}}
+  - {name: CDN优选-6, server: "6.cdn.5468936.xyz", port: 443, type: vmess, uuid: be9cf152-7cf1-46f9-88ed-a55b343c927b, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /linuxdo}}
+  - {name: CDN优选-7, server: "7.cdn.5468936.xyz", port: 443, type: vmess, uuid: be9cf152-7cf1-46f9-88ed-a55b343c927b, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /linuxdo}}
+  - {name: CDN优选-8, server: "8.cdn.5468936.xyz", port: 443, type: vmess, uuid: be9cf152-7cf1-46f9-88ed-a55b343c927b, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /linuxdo}}
 proxy-groups:
   - name: 自动测速
     type: load-balance
     proxies:
-      - 优选-cloudflare.182682.xyz
-      - 优选-ip.sb
-      - 优选-japan.com
-      - 优选-malaysia.com
-      - 优选-russia.com
-      - 优选-singapore.com
-      - 优选-visa.cn
-      - 优选-www.visa.com
-      - 优选-www.visa.com.sg
-      - 优选-www.visa.com.hk
-      - 优选-www.visa.com.tw
-      - 优选-www.visa.co.jp
-      - 优选-www.visakorea.com
-      - 优选-www.gco.gov.qa
-      - 优选-www.gov.se
-      - 优选-www.gov.ua
-      - 优选-www.digitalocean.com
-      - 优选-www.whoer.net
-      - 优选-www.whatismyip.com
-      - 优选-gur.gov.ua
-      - 优选-fbi.gov
-      - 优选-ns.cloudflare.com
+      - CDN优选-1
+      - CDN优选-2
+      - CDN优选-3
+      - CDN优选-4
+      - CDN优选-5
+      - CDN优选-6
+      - CDN优选-7
+      - CDN优选-8
     lazy: false
     url: http://www.gstatic.com/generate_204
     interval: 10
