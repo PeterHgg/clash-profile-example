@@ -8,14 +8,14 @@ mode: rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: CDN优选-1, server: "1.cdn.5468936.xyz", port: 443, type: vmess, uuid: be9cf152-7cf1-46f9-88ed-a55b343c927b, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /linuxdo}}
-  - {name: CDN优选-2, server: "2.cdn.5468936.xyz", port: 443, type: vmess, uuid: be9cf152-7cf1-46f9-88ed-a55b343c927b, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /linuxdo}}
-  - {name: CDN优选-3, server: "3.cdn.5468936.xyz", port: 443, type: vmess, uuid: be9cf152-7cf1-46f9-88ed-a55b343c927b, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /linuxdo}}
-  - {name: CDN优选-4, server: "4.cdn.5468936.xyz", port: 443, type: vmess, uuid: be9cf152-7cf1-46f9-88ed-a55b343c927b, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /linuxdo}}
-  - {name: CDN优选-5, server: "5.cdn.5468936.xyz", port: 443, type: vmess, uuid: be9cf152-7cf1-46f9-88ed-a55b343c927b, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /linuxdo}}
-  - {name: CDN优选-6, server: "6.cdn.5468936.xyz", port: 443, type: vmess, uuid: be9cf152-7cf1-46f9-88ed-a55b343c927b, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /linuxdo}}
-  - {name: CDN优选-7, server: "7.cdn.5468936.xyz", port: 443, type: vmess, uuid: be9cf152-7cf1-46f9-88ed-a55b343c927b, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /linuxdo}}
-  - {name: CDN优选-8, server: "8.cdn.5468936.xyz", port: 443, type: vmess, uuid: be9cf152-7cf1-46f9-88ed-a55b343c927b, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /linuxdo}}
+  - {name: CDN优选-1, server: "1.cdn.5468936.xyz", port: 80, type: vmess, uuid: be9cf152-7cf1-46f9-88ed-a55b343c927b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /linuxdo}}
+  - {name: CDN优选-2, server: "2.cdn.5468936.xyz", port: 80, type: vmess, uuid: be9cf152-7cf1-46f9-88ed-a55b343c927b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /linuxdo}}
+  - {name: CDN优选-3, server: "3.cdn.5468936.xyz", port: 80, type: vmess, uuid: be9cf152-7cf1-46f9-88ed-a55b343c927b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /linuxdo}}
+  - {name: CDN优选-4, server: "4.cdn.5468936.xyz", port: 80, type: vmess, uuid: be9cf152-7cf1-46f9-88ed-a55b343c927b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /linuxdo}}
+  - {name: CDN优选-5, server: "5.cdn.5468936.xyz", port: 80, type: vmess, uuid: be9cf152-7cf1-46f9-88ed-a55b343c927b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /linuxdo}}
+  - {name: CDN优选-6, server: "6.cdn.5468936.xyz", port: 80, type: vmess, uuid: be9cf152-7cf1-46f9-88ed-a55b343c927b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /linuxdo}}
+  - {name: CDN优选-7, server: "7.cdn.5468936.xyz", port: 80, type: vmess, uuid: be9cf152-7cf1-46f9-88ed-a55b343c927b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /linuxdo}}
+  - {name: CDN优选-8, server: "8.cdn.5468936.xyz", port: 80, type: vmess, uuid: be9cf152-7cf1-46f9-88ed-a55b343c927b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /linuxdo}}
 proxy-groups:
   - name: 自动测速
     type: load-balance
@@ -32,7 +32,7 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 10
     strategy: round-robin
-    timeout: 1500
+    timeout: 3000
 rule-providers:
   proxy:
     type: http
